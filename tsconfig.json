@@ -22,6 +22,7 @@
       "baseUrl": "src",
       "paths": {
         "@/*": ["*"],
+        "@app": ["lib/app.ts"],
         "@config": ["config"],
         "@controllers/*": ["http/controllers/*"],
         "@dtos/*": ["http/dtos/*"],
@@ -35,6 +36,6 @@
       }
     },
     "include": ["src/**/*.ts", "src/**/*.json", ".env"],
-    "exclude": ["node_modules", "logs", "src/tests"]
+    "exclude": ["node_modules", "logs"]
   }
   
