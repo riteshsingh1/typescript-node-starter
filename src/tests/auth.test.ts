@@ -8,6 +8,9 @@ import AuthRoute from "@routes/auth.route";
 afterAll(async () => {
   await new Promise<void>((resolve) => setTimeout(() => resolve(), 500));
 });
+afterAll(() => {
+  mongoose.connection.close();
+});
 
 describe("Testing Auth", () => {
   describe("[POST] /signup", () => {

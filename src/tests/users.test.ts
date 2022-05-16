@@ -8,7 +8,9 @@ import UsersRoute from "@routes/users.route";
 afterAll(async () => {
   await new Promise<void>((resolve) => setTimeout(() => resolve(), 500));
 });
-
+afterAll(() => {
+  mongoose.connection.close();
+});
 describe("Testing Users", () => {
   describe("[GET] /users", () => {
     it("response fineAll Users", async () => {
